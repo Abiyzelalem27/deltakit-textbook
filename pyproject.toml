@@ -54,3 +54,9 @@ docs = [
   "numpy>=2.3.0",
   "holoviews>=1.21.0"
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"] 
