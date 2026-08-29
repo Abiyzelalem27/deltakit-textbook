@@ -56,7 +56,8 @@ docs = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = {"" = "docs/notebooks/src"}
 
 [tool.setuptools.packages.find]
-where = ["src"] 
+where = ["docs/notebooks/src"]
+include = ["qec*"]
