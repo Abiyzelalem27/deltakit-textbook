@@ -6,12 +6,6 @@ import numpy as np
 import cirq
 import stimcirq
 from myMWPM import MWPMDecoder1D
-
-def get_binary_representation(index, n_qubits):
-    # Binary representation of index in n_qubits bits, LSB first
-    # This trick avoids having to do string manipulations with Python's generic bin() function
-    # TLDR: >> is a right-shift, & 1 picks out the LSBs
-    return (index >> np.arange(n_qubits)) & 1
     
 
 def count_from_left(syndromes, start_with_error):

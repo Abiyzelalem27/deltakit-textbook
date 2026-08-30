@@ -8,7 +8,7 @@ import math
 from math import comb, ceil
 import cirq, stimcirq
 from myMWPM import MWPMDecoder1D
-from qec.syndrome_extraction import get_syndrome_measurement 
+from qec.utils import get_syndrome_measurement 
 from tqdm import tqdm
 
 
@@ -274,6 +274,7 @@ def create_repetition_code_encoder(n_qubits):
 def create_full_repetition_code_circuit(n_qubits, error_probability, error_gate, logical_state):
 
     # Create qubits: data qubits for encoding, syndrome qubits for syndrome measurement
+    
     data_qubits = cirq.LineQubit.range(n_qubits)
     syndrome_qubits = cirq.LineQubit.range(n_qubits, 2*n_qubits - 1)
     
